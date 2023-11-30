@@ -70,8 +70,8 @@ public class GuiSelecciones extends JFrame implements ActionListener {
                     break;
                 case 2: //Camerun
                     GuiJugadores guiCamerun = new GuiJugadores("src/main/java/Data/datos/cmr.txt");
-                    this.setVisible(false);
-                    guiCamerun.setVisible(true);
+                    this.setVisible(true);
+                    guiCamerun.setVisible(false);
                     break;
                 case 3://Alemania
                     GuiJugadores guiAlemania = new GuiJugadores("src/main/java/Data/datos/ger.txt");
