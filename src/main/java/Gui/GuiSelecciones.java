@@ -57,26 +57,29 @@ public class GuiSelecciones extends JFrame implements ActionListener {
         }
 
         if (event.getSource().equals(jugadoresButton)) {
-            if (event.getSource().equals(selectPaísComboBox))
-                switch (selectPaísComboBox.getSelectedIndex()) {
-                    case 1: //Chile
-                        GuiJugadores guiChile = new GuiJugadores("src/main/java/Data/datos/chi.txt");
-                        break;
-                    case 2: //Australia
-                        GuiJugadores guiAustralia = new GuiJugadores("src/main/java/Data/datos/aus.txt");
-                        break;
-                    case 3: //Camerun
-                        GuiJugadores guiCamerun = new GuiJugadores("src/main/java/Data/datos/cmr.txt");
-                        break;
-                    case 4://Alemania
-                        GuiJugadores guiAlemania = new GuiJugadores("src/main/java/Data/datos/ger.txt");
-                        break;
-
-                }
-            } else {
-            JOptionPane.showMessageDialog(null, "Seleccione un país");
-            break;
+            switch (selectPaísComboBox.getSelectedIndex()) {
+                case 0: //Chile
+                    GuiJugadores guiChile = new GuiJugadores("src/main/java/Data/datos/chi.txt");
+                    guiChile.setVisible(true);
+                    this.setVisible(false);
+                    break;
+                case 1: //Australia
+                    GuiJugadores guiAustralia = new GuiJugadores("src/main/java/Data/datos/aus.txt");
+                    guiAustralia.setVisible(true);
+                    this.setVisible(false);
+                    break;
+                case 2: //Camerun
+                    GuiJugadores guiCamerun = new GuiJugadores("src/main/java/Data/datos/cmr.txt");
+                    this.setVisible(false);
+                    guiCamerun.setVisible(true);
+                    break;
+                case 3://Alemania
+                    GuiJugadores guiAlemania = new GuiJugadores("src/main/java/Data/datos/ger.txt");
+                    guiAlemania.setVisible(true);
+                    this.setVisible(false);
+                    break;
             }
+
         }
     }
 
